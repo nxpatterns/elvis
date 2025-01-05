@@ -1,0 +1,9 @@
+{
+  "name": "fe-base-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/fe-base-e2e/src",
+  "implicitDependencies": ["fe-base"],
+  "// targets": "to see all targets run: nx show project fe-base-e2e --web",
+  "targets": {}
+}
