@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-scss",
+    "nrwl.angular-console",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml",
+    "shd101wyy.markdown-preview-enhanced",
+  ]
+}
