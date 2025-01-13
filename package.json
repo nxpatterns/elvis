@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "fe-base:serve:development": "npx nx run fe-base:serve --configuration=development"
+    "fe-base:serve:development": "npx nx run fe-base:serve --configuration=development --host=0.0.0.0"
   },
   "private": true,
   "dependencies": {
