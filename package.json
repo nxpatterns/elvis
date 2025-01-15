@@ -2,7 +2,9 @@
   "name": "@elvis/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "fe-base:serve:development": "npx nx run fe-base:serve --configuration=development --host=0.0.0.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.0.0",
