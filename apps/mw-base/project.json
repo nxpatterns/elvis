@@ -6,29 +6,38 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "command": "webpack-cli build",
-        "args": ["node-env=production"]
+        "outputPath": "dist/apps/mw-base",
+        "main": "apps/mw-base/src/main.ts",
+        "tsConfig": "apps/mw-base/tsconfig.app.json",
+        "assets": [
+          "apps/mw-base/src/assets"
+        ]
       },
       "configurations": {
-        "development": {
-          "args": ["node-env=development"]
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mw-base/src/environments/environment.ts",
+              "with": "apps/mw-base/src/environments/environment.prod.ts"
+            }
+          ]
         }
       }
     },
     "serve": {
       "executor": "@nx/js:node",
-      "defaultConfiguration": "development",
-      "dependsOn": ["build"],
       "options": {
-        "buildTarget": "mw-base:build",
-        "runBuildTargetDependencies": false
+        "buildTarget": "mw-base:build"
       },
       "configurations": {
-        "development": {
-          "buildTarget": "mw-base:build:development"
-        },
         "production": {
           "buildTarget": "mw-base:build:production"
         }
