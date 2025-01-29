@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/fe-base",
         "index": "apps/fe-base/src/index.html",
         "browser": "apps/fe-base/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/fe-base/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -22,7 +26,9 @@
             "input": "apps/fe-base/public"
           }
         ],
-        "styles": ["apps/fe-base/src/styles.scss"],
+        "styles": [
+          "apps/fe-base/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -75,7 +81,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/fe-base/jest.config.ts"
       }
